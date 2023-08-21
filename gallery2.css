@@ -1,0 +1,253 @@
+ 
+.slider{width: 100%}
+.slider input{display: none;}
+.testimonials{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 500px;
+	perspective: 1000px;
+	overflow: hidden;
+}
+
+.slider {
+ 
+    height:400px; /* adjust this value to suit your needs */
+}
+
+
+.testimonials .item{
+	width:400px;
+	/* padding: 10px; */
+	border-radius: 1px;
+	background-color: #ffffff;
+	position: absolute;
+	border:1px solid white;
+	top: 0;
+	box-sizing: border-box;
+	text-align: center;
+	transition: transform 0.4s, scale 0.4s;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	user-select: none;
+	cursor: pointer;
+
+    
+}
+.testimonials .item h1{font-size: 114px; color: rgb(155, 110, 65);}
+.dots{display: flex; justify-content: center;align-items: center;}
+.dots label{
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #000000;
+	margin: 10px;
+	transition-duration: 0.2s;
+}
+#t-1:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-4"],
+#t-5:checked ~ .dots label[for="t-5"]{
+	transform: scale(2);
+	background-color: #fff;
+	box-shadow: 0px 0px 0px 3px #dddddd24;
+ 
+}
+
+#t-1:checked ~ .dots label[for="t-2"],
+#t-2:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-3"],
+#t-3:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-4"],
+#t-4:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-5"],
+#t-5:checked ~ .dots label[for="t-4"]{
+	transform: scale(1.5);
+}
+
+#t-1:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-4"],
+#t-3:checked ~ .testimonials label[for="t-5"],
+#t-4:checked ~ .testimonials label[for="t-1"],
+#t-5:checked ~ .testimonials label[for="t-2"]{
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+}
+
+#t-1:checked ~ .testimonials label[for="t-2"],
+#t-2:checked ~ .testimonials label[for="t-3"],
+#t-3:checked ~ .testimonials label[for="t-4"],
+#t-4:checked ~ .testimonials label[for="t-5"],
+#t-5:checked ~ .testimonials label[for="t-1"]{
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+}
+
+#t-2:checked ~ .testimonials label[for="t-1"],
+#t-3:checked ~ .testimonials label[for="t-2"],
+#t-4:checked ~ .testimonials label[for="t-3"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-1:checked ~ .testimonials label[for="t-5"]{
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+}
+
+#t-3:checked ~ .testimonials label[for="t-1"],
+#t-4:checked ~ .testimonials label[for="t-2"],
+#t-5:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-5"],
+#t-1:checked ~ .testimonials label[for="t-4"]{
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+	
+}
+
+#t-1:checked ~ .testimonials label[for="t-1"],
+#t-2:checked ~ .testimonials label[for="t-2"],
+#t-3:checked ~ .testimonials label[for="t-3"],
+#t-4:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-5"]{
+    z-index: 4;
+    transform: scale(1.5); /* scale the central image */
+
+}
+.slider .arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* this will make sure the labels/images behind can be clickable */
+}
+
+.slider .arrows label {
+    pointer-events: all; /* re-enable pointer events for arrow labels */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.slider .arrows .prev {
+    transform: rotate(135deg);
+}
+
+.slider .arrows .next {
+    transform: rotate(-45deg);
+}
+
+
+
+/* Basic styles for the slider */
+.slider {
+    /* Add your styles here */
+}
+
+.slider .testimonials {
+    /* Add your styles here */
+}
+
+.slider .item {
+    /* Add your styles here */
+}
+
+.slider .item img {
+    /* Add your styles here */
+}
+
+.slider .dots {
+    /* Add your styles here */
+}
+
+/* Responsive styles for the slider */
+@media screen and (max-width: 600px) {
+    .testimonials .item {
+        width: 150px; /* Reduce the width of each image */
+        min-height: 300px; /* Adjust the minimum height */
+    }
+
+    .slider {
+        height: 300px; /* Reduce the height of the slider */
+    }
+
+    /* Adjust the transforms for each checked state */
+    #t-1:checked ~ .testimonials label[for="t-3"],
+    #t-2:checked ~ .testimonials label[for="t-4"],
+    #t-3:checked ~ .testimonials label[for="t-5"],
+    #t-4:checked ~ .testimonials label[for="t-1"],
+    #t-5:checked ~ .testimonials label[for="t-2"] {
+        transform: translate3d(300px, 0, -90px) rotateY(-25deg);
+    }
+
+    #t-1:checked ~ .testimonials label[for="t-2"],
+    #t-2:checked ~ .testimonials label[for="t-3"],
+    #t-3:checked ~ .testimonials label[for="t-4"],
+    #t-4:checked ~ .testimonials label[for="t-5"],
+    #t-5:checked ~ .testimonials label[for="t-1"] {
+        transform: translate3d(150px, 0, -45px) rotateY(-15deg);
+    }
+
+    #t-2:checked ~ .testimonials label[for="t-1"],
+    #t-3:checked ~ .testimonials label[for="t-2"],
+    #t-4:checked ~ .testimonials label[for="t-3"],
+    #t-5:checked ~ .testimonials label[for="t-4"],
+    #t-1:checked ~ .testimonials label[for="t-5"] {
+        transform: translate3d(-150px, 0, -45px) rotateY(15deg);
+    }
+
+    #t-3:checked ~ .testimonials label[for="t-1"],
+    #t-4:checked ~ .testimonials label[for="t-2"],
+    #t-5:checked ~ .testimonials label[for="t-3"],
+    #t-2:checked ~ .testimonials label[for="t-5"],
+    #t-1:checked ~ .testimonials label[for="t-4"] {
+        transform: translate3d(-300px, 0, -90px) rotateY(25deg);
+    }
+}
+
+/* For screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .slider {
+        height: auto; /* or you can set specific height */
+    }
+
+    .testimonials {
+        min-height: 200px; /* adjust as needed */
+    }
+
+    .item {
+        width: 100%; /* takes the full width of its parent */
+    }
+
+    .item img {
+        width: 100%; /* takes the full width of its parent */
+        height: auto; /* maintain aspect ratio */
+    }
+
+    
+}
+
+/* For screens smaller than 480px (e.g., smartphones) */
+@media (max-width: 480px) {
+    .slider {
+        height: auto; /* or you can set specific height */
+    }
+
+    .testimonials {
+        min-height: 150px; /* adjust as needed */
+    }
+
+    .item {
+        width: 100%; /* takes the full width of its parent */
+        padding: 5px; /* reduce padding */
+    }
+
+    .item img {
+        width: 100%; /* takes the full width of its parent */
+        height: auto; /* maintain aspect ratio */
+    }
+
+     
+}
+

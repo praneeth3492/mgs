@@ -1,0 +1,88 @@
+ 
+.wrapper2 {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+.wrapper2 > .scroller {
+  width: auto;
+  height: calc(70vh + 20px);
+  overflow: auto;
+  display: flex;
+  /*scroll-behavior: smooth;*/
+}
+
+.slide2 {
+  width: 60vw;
+  height: 60vh;
+  margin-top: 5vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative;
+  transition: 1s ease;
+}
+.slide2 > .photo {
+  width: inherit;
+  height: inherit;
+  transition: 1s ease;
+}
+.slide2 > .photo:before {
+  content: '';
+  position: absolute;
+  color: #fff;
+  transform: rotate(-90deg);
+  top: 40px;
+  left: -60px;
+}
+
+/* slide number definition starts */
+
+.slide2:nth-child(1) > .photo:before {
+  content: '01 _____ 06';
+}
+
+.slide2:nth-child(2) > .photo:before {
+  content: '02 _____ 06';
+}
+
+.slide2:nth-child(3) > .photo:before {
+  content: '03 _____ 06';
+}
+
+.slide2:nth-child(4) > .photo:before {
+  content: '04 _____ 06';
+}
+
+.slide2:nth-child(5) > .photo:before {
+  content: '05 _____ 06';
+}
+
+.slide2:nth-child(6) > .photo:before {
+  content: '06 _____ 06';
+}
+
+/* Slide number definition ends */
+
+.slide2 > .photo > img {
+  width: 100%;
+  height: 100%;
+}
+.slide2 > .text {
+  position: absolute;
+  right: -50px;
+  bottom: 20%;
+  color: white;
+  font-size: 80px;
+  font-family: arial, sans-serif;
+  line-height: 50px;
+  transition: .8s ease;
+}
+.slide2 > .text > h2 {
+  font-size: 75px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.slide2 > .text > span {
+  font-size: 20px;
+  line-height: 20px;
+}

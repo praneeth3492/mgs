@@ -1,0 +1,93 @@
+$flaticon_mgs-font: "flaticon_mgs";
+
+@font-face {
+    font-family: $flaticon_mgs-font;
+    src: url("./flaticon_mgs.ttf?caa6dcb69af73778a603c568e9bf2e37") format("truetype"),
+url("./flaticon_mgs.woff?caa6dcb69af73778a603c568e9bf2e37") format("woff"),
+url("./flaticon_mgs.woff2?caa6dcb69af73778a603c568e9bf2e37") format("woff2"),
+url("./flaticon_mgs.eot?caa6dcb69af73778a603c568e9bf2e37#iefix") format("embedded-opentype"),
+url("./flaticon_mgs.svg?caa6dcb69af73778a603c568e9bf2e37#flaticon_mgs") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mgs !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_mgs-map: (
+    "goal": "\f101",
+    "talking": "\f102",
+    "graduation-cap": "\f103",
+    "facebook": "\f104",
+    "instagram": "\f105",
+    "google": "\f106",
+    "twitter": "\f107",
+    "linkedin": "\f108",
+    "location": "\f109",
+    "phone-call": "\f10a",
+    "mail": "\f10b",
+    "twitter-1": "\f10c",
+    "instagram-1": "\f10d",
+    "linkedin-1": "\f10e",
+    "facebook-1": "\f10f",
+    "youtube": "\f110",
+    "location-1": "\f111",
+);
+
+.flaticon-goal:before {
+    content: map-get($flaticon_mgs-map, "goal");
+}
+.flaticon-talking:before {
+    content: map-get($flaticon_mgs-map, "talking");
+}
+.flaticon-graduation-cap:before {
+    content: map-get($flaticon_mgs-map, "graduation-cap");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon_mgs-map, "facebook");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon_mgs-map, "instagram");
+}
+.flaticon-google:before {
+    content: map-get($flaticon_mgs-map, "google");
+}
+.flaticon-twitter:before {
+    content: map-get($flaticon_mgs-map, "twitter");
+}
+.flaticon-linkedin:before {
+    content: map-get($flaticon_mgs-map, "linkedin");
+}
+.flaticon-location:before {
+    content: map-get($flaticon_mgs-map, "location");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon_mgs-map, "phone-call");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon_mgs-map, "mail");
+}
+.flaticon-twitter-1:before {
+    content: map-get($flaticon_mgs-map, "twitter-1");
+}
+.flaticon-instagram-1:before {
+    content: map-get($flaticon_mgs-map, "instagram-1");
+}
+.flaticon-linkedin-1:before {
+    content: map-get($flaticon_mgs-map, "linkedin-1");
+}
+.flaticon-facebook-1:before {
+    content: map-get($flaticon_mgs-map, "facebook-1");
+}
+.flaticon-youtube:before {
+    content: map-get($flaticon_mgs-map, "youtube");
+}
+.flaticon-location-1:before {
+    content: map-get($flaticon_mgs-map, "location-1");
+}

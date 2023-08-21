@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect from http://manchester.global or https://manchester.global to https://www.manchester.global
+RewriteCond %{HTTP_HOST} ^manchester\.global$ [NC]
+RewriteRule ^(.*)$ https://www.manchester.global/$1 [R=301,L]
+
+# Redirect all HTTP requests to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]

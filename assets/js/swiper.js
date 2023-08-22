@@ -26,20 +26,4 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
-
-  // Play button click event
-  const playButton = document.querySelector(".swiper-button-play");
-  playButton.addEventListener("click", function () {
-    swiper.autoplay.start();
-    playButton.style.display = "none";
-    pauseButton.style.display = "block";
-  });
-
-  // Pause button click event
-  const pauseButton = document.querySelector(".swiper-button-pause");
-  pauseButton.addEventListener("click", function () {
-    swiper.autoplay.stop();
-    pauseButton.style.display = "none";
-    playButton.style.display = "block";
-  });
 });

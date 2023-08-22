@@ -26,10 +26,10 @@
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/css/flaticon-set.css" rel="stylesheet" />
     <link href="assets/flaticon/font/flaticon_mgs.css" rel="stylesheet" />
-    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <!-- <link href="assets/css/elegant-icons.css" rel="stylesheet" /> -->
     <link href="assets/css/magnific-popup.css" rel="stylesheet" />
-    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
-    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <!-- <link href="assets/css/owl.carousel.min.css" rel="stylesheet" /> -->
+    <!-- <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" /> -->
     <link href="assets/css/animate.css" rel="stylesheet" />
     <link href="assets/css/bootsnav.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
@@ -39,7 +39,7 @@
  
 
     <!-- ========== Google Fonts ========== -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
     <meta name="google-site-verification" content="iuQLGBHeE3QKNzVAERYtlCYw41nBauybnJoNmNvTRz0" />
 </head>
@@ -117,10 +117,10 @@
     <!-- End Header -->
    <!-- Start Registration & Faq 
     ============================================= -->
-    <div class="reg-area inc-faq default-padding-top" onsubmit="return validateForm()">
+    <div class="reg-area inc-faq default-padding-top">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>                 
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li class="active">Contact us </li>
             </ul>
             <div class="row">
@@ -128,58 +128,69 @@
                     <div class="col-md-6 reg-form">
                         <div class="reg-box2 text-light">
                             <h3 style="color: black;">Enquiry Form</h3>
-                            <form action="#" method="post">
+                            <form action="form_submission.js" method="post" onsubmit="submitt(); return false;">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="Name" type="text" name="name" id="name" required  autocomplete="off">
+                                            <input class="form-control" placeholder="First Name" type="text" name="name" id="name" required autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="Mobile*" type="text" name="mobile" id="mobile" required  autocomplete="off">
+                                            <input class="form-control" placeholder="Last Name" type="text" name="last_name" id="last_name" required autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="Email*" type="email" name="email" id="email" required  autocomplete="off">
+                                            <input class="form-control" placeholder="Mobile*" type="text" name="mobile" id="mobile" required autocomplete="off">
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <select name="grade" id="grade" required>
-                                                <option value="1">Choose Grade</option>
-                                                <option value="Nursery">Nursery</option>
-                                                <option value="PP-1">PP-1</option>
-                                                <option value="PP-2">PP-2</option>
-                                                <option value="Grade 1">Grade 1</option>
-                                                <option value="Grade 2">Grade 2</option>
-                                                <option value="Grade 3">Grade 3</option>
-                                                <option value="Grade 4">Grade 4</option>
-                                                <option value="Grade 5">Grade 5</option>
-                                                <option value="Grade 6">Grade 6</option>
-                                                <option value="Grade 7">Grade 7</option>
-                                                <option value="Grade 8">Grade 8</option>
-                                                <option value="Grade 9">Grade 9</option>
+                                            <input class="form-control" placeholder="Email*" type="email" name="email" id="email" required autocomplete="off">
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Parent Name" type="text" name="parent_name" id="parent_name" required autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Class ID" type="text" name="class_id" id="class_id" required autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Academic Year (Last 2 digits)" type="text" name="academic_year" id="academic_year" required autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select name="gender" id="gender" required>
+                                                <option value="M">Male</option>
+                                                <option value="F">Female</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input class="form-control" placeholder="Message" type="text"
-                                                name="message" id="message" required autocomplete="off">
+                                            <input class="form-control" placeholder="Message" type="text" name="message" id="message" required autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" onclick="submitt();">
+                                        <button type="submit">
                                             Submit
                                         </button>
                                     </div>
                                 </div>
                             </form>
-
                         </div>
                     </div>
+                 
+             
+         
                     <div class="col-md-6 contact">
                         <div class="about-text">
                             <h2 style="color:#c8a275 ;">Get In Touch</h2>
@@ -227,67 +238,7 @@
     
      <!-- Start Register Form 
     ============================================= -->
-    <form id="register-form" class="mfp-hide white-popup-block">
-        <div class="col-md-12 login-custom">
-            <h4>Enquiry form</h4>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Name*" type="text" name="name" id="name" required autocomplete="off">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Mobile*" type="text" name="mobile" id="mobile" required autocomplete="off">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Email*" type="email" name="email" id="email" required autocomplete="off">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="form-group">
-                        <select name="grade" id="grade" required>
-                            <option value="1">Choose Grade</option>
-                            <option value="Nursery">Nursery</option>
-                            <option value="PP-1">PP-1</option>
-                            <option value="PP-2">PP-2</option>
-                            <option value="Grade 1">Grade 1</option>
-                            <option value="Grade 2">Grade 2</option>
-                            <option value="Grade 3">Grade 3</option>
-                            <option value="Grade 4">Grade 4</option>
-                            <option value="Grade 5">Grade 5</option>
-                            <option value="Grade 6">Grade 6</option>
-                            <option value="Grade 7">Grade 7</option>
-                            <option value="Grade 8">Grade 8</option>
-                            <option value="Grade 9">Grade 9</option>
-                        
-
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="form-group">
-                        <input class="form-control" autocomplete="off" placeholder="Message" type="text" name="message" id="message" required>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <button type="submit" onclick="submitt();">Submit</button>
-                </div>
-            </div>
-        </div>
-    </form>
+     
 
 
 
@@ -450,7 +401,7 @@
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/count-to.js"></script>
-    <script src="assets/js/loopcounter.js"></script>
+    <!-- <script src="assets/js/loopcounter.js"></script> -->
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>

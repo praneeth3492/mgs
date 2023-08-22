@@ -7634,7 +7634,7 @@ text-decoration: underline;
 .curriculum h2
 {
 
-  font: size 45px;
+  font-size: 30px;
   font-weight:600;
   color: #004DA1;
 }
@@ -7934,3 +7934,66 @@ ul.no-bullets li {
       width: 50px; /* Reduce the size on smaller screens */
   }
 }
+
+.banner-wrapper {
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  display: block;
+}
+
+.banner-content {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.welcome-text {
+  margin-bottom: 20px;
+}
+ 
+
+.admissions-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+  .banner-image {
+      /* You can set a different banner image for mobile view */
+      content: url(assets/img/mgs-banner-mobile-view.webp);
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+  .welcome-text {
+      margin-bottom: 15px; /* You can adjust this value for mobile */
+      font-size: 22px; /* Optional: Adjust font size for mobile */
+  }
+
+  .admissions-button {
+      padding: 8px 16px; /* Smaller padding for mobile */
+      font-size: 12px; /* Optional: Adjust font size for mobile */
+  }
+}
+
+
+
+/* Tablet view */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .banner-image {
+      /* You can set a different banner image for tablet view */
+      content: url(ssets/img/mgs-banner-mobile-view.webp);
+  }
+}
+
